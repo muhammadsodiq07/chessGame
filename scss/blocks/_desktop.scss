@@ -32,7 +32,7 @@
 .chess__dimentions {
   position: absolute;
   top: 150px;
-  right: 300px;
+  right: 100px;
 }
 
 
@@ -92,8 +92,8 @@
 
 .three__d {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 80px;
+  right: 110px;
   width: 60px;
   height: 60px;
   font-size: 32px;
@@ -103,12 +103,4 @@
   border: 1px solid #a75900;
   transition: all 0.1s ease-in-out;
   cursor: pointer;
-}
-
-.btn-flip {
-  animation: rotate-in-hor 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-.add__3d {
-  transform: perspective(500px) rotateX(21deg) rotateY(0deg) rotateZ(0deg) translateX(0px) translateY(-50px) translateZ(50px) scaleX(1.3);
 }

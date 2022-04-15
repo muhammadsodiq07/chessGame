@@ -243,7 +243,7 @@ bishop.addEventListener('click',()=>{
                          if (el.className.includes(`Y=${elem.y}`)) {
                              el.classList.add('green')
                          }
-                         if (el.className.includes(`x_${elem.x}`)) {
+                         if (el.className.includes(`X=${elem.x}`)) {
                              el.classList.add('green')
                          }
                          for (let i = 0; i < 8; i++) {
@@ -283,19 +283,52 @@ bishop.addEventListener('click',()=>{
  })
 
 
+let path = document.querySelector(".pawn")
+
+path.addEventListener('click', () => {
+  chessDiv.forEach((item) => {
+    cheesboard.forEach((elem, i) => {
+        item.addEventListener('mouseover', () => {
+            if (item.className.includes(`X=2`)) {
+                if (item.id == i) {
+                  chessDiv.forEach((el) => {
+                        el.classList.remove('green')
+                        if (el.className.includes(`Y=${elem.y}`) && el.className.includes(`X=${elem.x + 1}`)) {
+                            el.classList.add('green')
+                        }
+                        if (el.className.includes(`Y=${elem.y}`) && el.className.includes(`X=${elem.x + 2}`)) {
+                            el.classList.add('green')
+                        }
+                    })
+                }
+            } else if (item.id == i) {
+              chessDiv.forEach((el) => {
+                    if (el.className.includes(`Y=${elem.y}`) && el.className.includes(`X=${elem.x + 1}`)) {
+                        el.classList.add('green')
+                    } else {
+                        el.classList.remove('green')
+                    }
+                })
+            }
+        })
+        item.addEventListener("mouseout", () => {
+            if (item.id == i) {
+              chessDiv.forEach((el, id) => {
+                    el.classList.remove('green')
+                })
+            }
+        })
+    })
+})
+})
 
 
 
 
- let btnThreed = document.querySelector('.three__d');
 
- btnThreed.addEventListener('click', (e) => {
-   btnThreed.classList.toggle('changeColor')
-   board.classList.toggle('add__3d');
-   if (e.target.textContent == '3D') e.target.textContent = '2D';
-   else e.target.textContent = '3D';
- })
- 
+
+
+
 
 
 
