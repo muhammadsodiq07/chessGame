@@ -1,9 +1,9 @@
 /* CONTAINER */
 .container {
-  width: 100%;
-  max-width: $width-container;
-  padding-left: $p-container;
-  padding-right: $p-container;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 98%;
+  height: 100vh;
 }

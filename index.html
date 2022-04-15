@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lesson</title>
+    <title>Chess</title>
     <link
       href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
       rel="stylesheet"
@@ -16,8 +16,37 @@
     />
     <link rel="stylesheet" href="css/main.min.css" />
   </head>
-
   <body>
+
+    <section id="main">
+      <button class="three__d">3D</button>
+      <div class="chess__dimentions">
+        <p class="chess__x">X=0</p>
+        <p class="chess__y">Y=0</p>
+      </div>
+
+      <div class="btns">
+    <button class="btn king"><img  class="character" src="images/King.png" alt="character"></button>
+    <button class="btn queen"><img class="character" src="images/Queen.png" alt="character"></button>
+    <button class="btn tower"><img class="character" src="images/Castle.png" alt="character"></button>
+    <button class="btn knight"><img class="character" src="images/Knight.png" alt="character"></button>
+    <button class="btn bishop"><img class="character" src="images/Bishop.png" alt="character"></button>
+    <button class="btn pawn"><img class="character" src="images/Pawn.png" alt="character"></button>
+  </div>
+      <div class="container chesstop">
+          <div class="chess__box">
+  
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+
+    
+    <script src="js/chessboard.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
