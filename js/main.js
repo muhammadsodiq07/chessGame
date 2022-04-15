@@ -259,6 +259,12 @@ bishop.addEventListener('click',()=>{
                              if (el.className.includes(`Y=${elem.y + i}`) && el.className.includes(`X=${elem.x - i}`)) {
                                  el.classList.add('green')
                              }
+                             if (el.className.includes(`Y=${elem.y + i}`) && el.className.includes(`X=${elem.x}`)) {
+                              el.classList.add('green')
+                          }
+                          if (el.className.includes(`Y=${elem.y - i}`) && el.className.includes(`X=${elem.x}`)) {
+                            el.classList.add('green')
+                        }
                          }
                      })
      
